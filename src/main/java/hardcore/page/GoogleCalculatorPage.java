@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static hardcore.page.ExplicitWait.waitForClickabilityOfElement;
-import static hardcore.page.ExplicitWait.waitForPresenceOfElement;
+import static hardcore.waits.ExplicitWait.waitForClickabilityOfElement;
+import static hardcore.waits.ExplicitWait.waitForPresenceOfElement;
 
 public class GoogleCalculatorPage {
     private final WebDriver driver;
