@@ -12,9 +12,10 @@ public class DriverSingleton {
         public static WebDriver getDriver(){
             if (null == driver){
                 switch (System.getProperty("browser")){
-                    case "Safari": {
-                        WebDriverManager.firefoxdriver().setup();
+                    case "safari": {
+                        WebDriverManager.safaridriver().setup();
                         driver = new SafariDriver();
+                        break;
                     }
                     default: {
                         WebDriverManager.chromedriver().setup();

@@ -53,12 +53,12 @@ public class GoogleCalculatorPage {
         WebElement iframe = waitForPresenceOfElement(driver, "//article[@id='cloud-site']/devsite-iframe/iframe");
         driver.switchTo().frame(iframe);
 
-        iframe = driver.findElement(By.xpath("//iframe[@id='myFrame']"));
+        iframe = waitForPresenceOfElement(driver, "//iframe[@id='myFrame']");
         driver.switchTo().frame(iframe);
         return this;
     }
     public GoogleCalculatorPage addNumberOfInstances (CalculatorForm form) {
-        computeEngine.click();
+        waitForClickabilityOfElement(driver, computeEngine).click();
         numberOfInstances.sendKeys(form.getNumberOfInstances());
         return this;
     }
